@@ -1,0 +1,102 @@
+*{
+  font-family: 'Nunito';
+}
+
+#web_title{
+    position: sticky;
+    
+    top: 0rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.input-group{
+    display: flex;
+}
+.user_input{
+    display: flex;
+    width: 35%;
+}
+
+#calories{
+  display: flex;
+  margin: 2rem 0;
+}
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.progress:not(#calories) {
+  z-index: -1;
+  width: 150px;
+  height: 150px;
+  background: none;
+  position: relative;
+}
+
+.progress:not(#calories)::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress:not(#calories)>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.progress:not(#calories) .progress-left {
+  left: 0;
+}
+
+.progress:not(#calories) .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.progress:not(#calories) .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+
+.progress:not(#calories) .progress-right {
+  right: 0;
+}
+
+.progress:not(#calories) .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+}
+
+.progress:not(#calories) .progress-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
